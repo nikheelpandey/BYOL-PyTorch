@@ -6,7 +6,6 @@ Bootstrap Your Own Latent proposes a new self-supervised image representation le
 
 ## Architecture
 The proposed learning approach uses an online network and a target network as shown below in order to generate two encodings of different views of the same image.
-
 ![Architecture](architecture.png)
 
 ## Loss
@@ -19,8 +18,7 @@ The BYOL model is trained using the LARS optimizer.
 After training, only the encoder of the online network is kept and a classifier can be trained over that encoder.
 
 ## Performance
-The l2 loss function after 25 epochs on CIFAR10. The loss function for the BYOL model should further go down as we increase the ```epochs``` parameter. The `epochs` parameter is also responsible for scheduling the learning rate.
- ![Contrastive Loss @ 25 epochs](loss.png)
+The l2 loss function after 25 epochs on CIFAR10. The loss function for the BYOL model should further go down as we increase the ```epochs``` parameter. The `epochs` parameter is also responsible for scheduling the learning rate.![Contrastive Loss @ 25 epochs](loss.png)
 
 TODO:
 - Train classifier on the online encoder.
