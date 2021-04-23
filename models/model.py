@@ -4,6 +4,7 @@ import torchvision.models as models
 
 
 class ProjectionHead(nn.Module):
+    
     def __init__(self,in_channel,hidden_size, projection_size):
         super(ProjectionHead,self).__init__()
 
