@@ -48,13 +48,13 @@ warmup_lr = 0
 momentum = 0.9
 lr =  0.002
 final_lr =  0
-epochs = 25
+epochs = 400
 stop_at_epoch = 100
 batch_size = 64
 image_size = (92,92)
 
 
-train_loader, test_loader = get_train_test_dataloaders(batch_size=batch_size)
+train_loader,mem_loader, test_loader = get_train_mem_test_dataloaders(batch_size=batch_size)
 train_transform,test_transform = gpu_transformer(image_size)
 
 
