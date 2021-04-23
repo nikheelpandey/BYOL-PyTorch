@@ -1,6 +1,9 @@
 import copy
 import torch 
+import numpy as np
 import torch.nn as nn
+from math import pi, cos 
+import torch.nn.functional as tf 
 import torchvision.models as models 
 
 def loss_fn(q1,q2, z1t,z2t):
