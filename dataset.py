@@ -22,8 +22,8 @@ CIFAR_MEAN =  [0.49139968, 0.48215827, 0.44653124]
 CIFAR_STD  =  [0.24703233, 0.24348505, 0.26158768]
 
 
-CIFAR_MEAN_ =  torch.FloatTensor([CIFAR_MEAN, CIFAR_STD])
-CIFAR_STD_  =  torch.FloatTensor([CIFAR_MEAN, CIFAR_STD])
+CIFAR_MEAN_ =  torch.FloatTensor([CIFAR_MEAN])
+CIFAR_STD_  =  torch.FloatTensor([CIFAR_STD])
 
 
 # GPU based augmentation: https://colab.research.google.com/drive/1T20UNAG4SdlE2n2wstuhiewve5Q81VpS#scrollTo=-AnIAZjeIP35
@@ -32,7 +32,7 @@ class InitalTransformation():
     def __init__(self):
         self.transform = T.Compose([
             T.ToTensor(),
-            # transforms.Normalize(CIFAR_MEAN_,CIFAR_STD_),
+            transforms.Normalize(CIFAR_MEAN_,CIFAR_STD_),
         ])
 
     def __call__(self, x):
